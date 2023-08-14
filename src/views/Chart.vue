@@ -41,14 +41,13 @@ onMounted(() => {
   const ctx = document.getElementById('chart')
   chart = new Chart(ctx, config)
 
-  console.log("Onmounted")
-
 })
 
 
-onBeforeUnmount(()=>{
-  console.log("onbeforeUnmount")
-
+onBeforeUnmount(() => {
+  chart.destroy();
+  alert("The beforeUnmount Hooks is called: The chart is processed to destroy")
+  console.log("The beforeUnmount Hooks has finished working: The chart now destroy")
 })
 
 function updateChart() {

@@ -23,9 +23,11 @@ onMounted(()=>{
 
 
 onBeforeUnmount(() => {
-  console.log("onbefore unmount")
-  carousel.destroy()
+  alert("The beforeUnmount Hooks is called: The carousel is processed to destroy")
+  carousel.destroy();
+  console.log("The beforeUnmount Hooks has finished working: The carousel now destroy")
 })
+
 
 
 const newItem = ref('https://images.unsplash.com/photo-1682685794761-c8e7b2347702?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2370&q=80')
